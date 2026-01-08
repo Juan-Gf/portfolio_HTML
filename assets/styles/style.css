@@ -17,6 +17,11 @@ body {
     background: var(--gray-200);
     color: var(--black-800);
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* ocupa toda a altura da viewport */
 }
 
 h1, h2, h3 {
@@ -86,9 +91,9 @@ nav a:hover {
 }
 
 #about img {
-    width: 200px;
-    flex-shrink: 0;
-    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -145,6 +150,7 @@ footer img:hover {
     gap: 2rem;
     width: 90%;
     margin: 2rem auto;
+    align-items: center;
 }
 
 form {
@@ -207,4 +213,24 @@ form span {
 
 .article_mapa iframe {
     align-self: center;
+}
+
+main {
+    flex: 1;
+    /* ocupa o espaço disponível */
+}
+
+@media (min-width: 1200px) {
+    .main_contato {
+        max-width: 1200px;
+        /* limita largura do conteúdo */
+        margin: 2rem auto;
+        /* centraliza */
+        max-height: 100vh;
+    }
+
+    footer {
+        margin-top: auto;
+        /* empurra rodapé para o fim */
+    }
 }
